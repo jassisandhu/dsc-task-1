@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/first"
+            android:orientation="vertical"
+            android:layout_marginLeft="12dp">
+
+            <ImageView
+                android:id="@+id/img_dsc"
+                android:src="@drawable/dc"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:oritation="horizontal"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="DSC KIET"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="progress-tracker"
+                android:textColor="@color/black"
+                android:textSize="24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="To maintain the track of progress of our lazy developers"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/first"
+            android:id="@+id/second"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp">
+            <ImageView
+                android:id="@+id/star"
+                android:src="@drawable/ic_star"
+                android:layout_width="18dp"
+
+                android:layout_marginTop="4dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+
+                android:layout_height="wrap_content"
+                android:text="4 stars"
+                android:layout_marginLeft="8dp" />
+            <ImageView
+                android:id="@+id/forks"
+                android:src="@drawable/ic_fork"
+                android:layout_width="18dp"
+                android:layout_marginTop="4dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+
+                android:layout_height="wrap_content"
+                android:text="forks"
+                android:layout_marginLeft="4dp" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/second"
+            android:id="@+id/third"
+
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="0dp"
+                    android:padding="4dp"
+                    android:layout_margin="8dp"
+                    android:text="Star"
+                    android:layout_weight="1"
+                    android:textColor="#fff"
+                    android:id="@+id/btn1"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:padding="4dp"
+                    android:layout_weight="1"
+                    android:text="Watch"
+                    android:layout_margin="8dp"
+                    android:textColor="#fff"
+
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@id/third"
+            android:id="@+id/fourth"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="#8A8285"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/fourth"
+            android:padding="8dp"
+            android:id="@+id/in_check"
+            android:layout_height="wrap_content">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fifth"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+
+                    android:id="@+id/img_issue"
+                    android:src="@drawable/ic_square"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@id/img_issue"
+                    android:layout_marginLeft="16dp"
+                    android:id="@+id/issue_txt"
+                    android:textSize="20dp"
+                    android:text="Issues"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="0"
+                    android:textColor="#6C6565"
+                    android:textSize="20dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sixth"
+                android:layout_below="@id/fifth"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+
+                    android:id="@+id/img_pullreq"
+                    android:src="@drawable/ic_square_two"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@id/img_pullreq"
+                    android:layout_marginStart="16dp"
+
+                    android:textSize="20dp"
+                    android:text="Pull Requests"
+                    android:layout_marginLeft="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="3"
+                    android:textColor="#6C6565"
+                    android:textSize="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sixth"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_marginStart="12dp"
+                    android:id="@+id/img_watcher"
+                    android:src="@drawable/ic_square_three"
+
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@id/img_watcher"
+                    android:layout_marginStart="16dp"
+
+                    android:textSize="20dp"
+                    android:text="Watchers"
+                    android:layout_marginLeft="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="1"
+                    android:textColor="#6C6565"
+                    android:textSize="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@id/in_check"
+            android:id="@+id/check"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="#8A8285"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/check"
+            android:padding="8dp"
+            android:id="@+id/card_b"
+            android:layout_height="wrap_content">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="12dp"
+                    android:id="@+id/master"
+                    android:src="@drawable/ic_fork"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9C9191"
+                    android:layout_toRightOf="@id/master"
+                    android:layout_marginStart="16dp"
+
+                    android:textSize="20dp"
+                    android:text="master"
+                    android:layout_marginLeft="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="CHANGE"
+                    android:textSize="14dp"
+                    android:textColor="#970F39CF"
+                    android:layout_marginEnd="12dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/code"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/fifth"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+
+                    android:layout_marginStart="28dp"
+
+                    android:textSize="20dp"
+                    android:text="Browse Code"
+                    android:layout_marginLeft="28dp" />
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+
+                    android:layout_marginStart="28dp"
+
+                    android:textSize="20dp"
+                    android:text="commit"
+                    android:layout_marginLeft="28dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="1"
+                    android:textColor="#6C6565"
+                    android:textSize="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/card_view"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_margin="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/card_b"
+            android:layout_height="200dp"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Progress Tracker"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginStart="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Update your daily work details here, Sorry Devs ^)"
+                    android:textSize="20dp"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+
+                    android:layout_marginStart="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Follow this while merging PR"
+                    android:textSize="20dp"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+
+                    android:layout_marginStart="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:padding="4dp"
+                    android:text="#(Index of PR) from GITHUB handle"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginStart="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="#1 from goelaakash79"
+                    android:padding="4dp"
+                    android:textSize="20dp"
+                    android:textColor="#807777"
+                    android:textStyle="bold"
+                    android:layout_marginStart="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>
